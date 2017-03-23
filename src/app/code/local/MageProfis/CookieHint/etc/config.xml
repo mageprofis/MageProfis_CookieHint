@@ -24,6 +24,16 @@
         </routers>
     </frontend>
     <global>
+        <helpers>
+            <mageprofis_cookiehint>
+                <class>MageProfis_CookieHint_Helper</class>
+            </mageprofis_cookiehint>
+        </helpers>
+        <models>
+            <mageprofis_cookiehint>
+                <class>MageProfis_CookieHint_Model</class>
+            </mageprofis_cookiehint>
+        </models>
         <resources>
             <cookiehint_setup>
                 <setup>
@@ -32,5 +42,33 @@
                 </setup>
             </cookiehint_setup>
         </resources>
-    </global>    
+    </global>
+    <adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <mageprofis_cookiehint>
+                                            <title>Cookie Hint</title>
+                                        </mageprofis_cookiehint>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+    <default>
+        <mageprofis_cookiehint>
+            <general>
+                <cookie_type>session</cookie_type>
+            </general>
+        </mageprofis_cookiehint>
+    </default>
 </config>
